@@ -1,0 +1,19 @@
+{
+  "framework": "nextjs",
+  "regions": ["iad1", "sfo1", "fra1", "sin1"],
+  "headers": [
+    {
+      "source": "/api/v1/image",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "max-age=86400"
+        }
+      ]
+    }
+  ]
+}
